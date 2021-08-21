@@ -34,6 +34,7 @@ TODO: Write credits
 
 PyServ uses the MIT License:
 
+```md
 MIT License
 
 Copyright (c) 2021 veil-ctf
