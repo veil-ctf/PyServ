@@ -11,7 +11,7 @@ python3 setup.py install
 ```
 OR
 ```sh
-pip3 install .
+pip3 install /path/to/pyserv
 ```
 
 ## Usage
