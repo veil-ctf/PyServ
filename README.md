@@ -9,6 +9,10 @@ Install PyServ using the `setup.py` file.
 ```sh
 python3 setup.py install
 ```
+OR
+```sh
+pip3 install .
+```
 
 ## Usage
 
