@@ -22,12 +22,26 @@ SOFTWARE."""
 
 import requests
 
-class IServ:
+class UnexpectedException(Exception):
+    def __str__(self) -> str:
+        return "Unexpected Exception occured"
+
+class ServerError(Exception):
+    def __str__(self) -> str:
+        return "Server Error"
+
+class LoginErr(Exception):
+    def __str__(self) -> str:
+        return "Could not log in"
+
+class IServ():
     def __init__(self, username, url, password):
         self.username = username
         self.url = url
         self.password = password
-    def start():
-        login_req = requests.post(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
+    def start(self):
+        login_req = requests.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
         if not "displayName" in login_req.text:
-            raise LoginErr
+            raise LoginErr()
+        else:
+            print("Could not log in")
