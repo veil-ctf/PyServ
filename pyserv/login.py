@@ -21,6 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
 import requests
+from pyserv.extra import ping
 
 class UnexpectedException(Exception):
     def __str__(self) -> str:
@@ -38,7 +39,6 @@ class IServ():
     def __init__(self, username, url, password):
         self.username = username
         self.url = url
-        print(self.url)
         # Bad solution but it will work for now
         if "/iserv/app/login" in url:
             self.url = url
@@ -48,9 +48,8 @@ class IServ():
             self.url = url+"/iserv/app/login"
         self.password = password
         self.session = requests.Session()
-    def start(self):
+    def login(self):
+        if ping.Ping().test() != True:
+            print("Good")
         login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
-        if not "displayName" in login_req.text:
-            raise LoginErr()
-        else:
-            print("Logged in!")
+        raise LoginErr() if not "displayName" in login_req.text else print("Logged in!")
