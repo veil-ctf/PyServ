@@ -47,8 +47,9 @@ class IServ():
         elif url[-1] != "/":
             self.url = url+"/iserv/app/login"
         self.password = password
+        self.session = requests.Session()
     def start(self):
-        login_req = requests.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
+        login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
         if not "displayName" in login_req.text:
             raise LoginErr()
         else:
