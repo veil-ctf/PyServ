@@ -16,8 +16,12 @@ pip3 install /path/to/pyserv
 
 ## Usage
 
-```sh
-pyserv --url "http://your_iserv_url" --username "your_username" --password "your_password"
+```python
+from pyserv import login
+
+iserv = login.IServ("username", "url", "password")
+
+iserv.start()
 ```
 
 ## Contributing
