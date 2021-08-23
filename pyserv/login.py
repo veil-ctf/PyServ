@@ -36,20 +36,22 @@ class LoginErr(Exception):
         return "Could not log in"
 
 class IServ():
-    def __init__(self, username, url, password):
+    def __init__(self, username, password, url):
         self.username = username
-        self.url = url
         # Bad solution but it will work for now
-        if "/iserv/app/login" in url:
-            self.url = url
+        self.url = url
+        if "/iserv/app/login" in self.url:
+            self.url = self.url
         elif url[-1] == "/":
-            self.url = url+"iserv/app/login"
+            self.url = self.url+"iserv/app/login"
         elif url[-1] != "/":
-            self.url = url+"/iserv/app/login"
+            self.url = self.url+"/iserv/app/login"
         self.password = password
         self.session = requests.Session()
     def login(self):
         if ping.Ping().test() != True:
-            print("Good")
+            print("Ping test failed, exiting")
+            exit
         login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
-        raise LoginErr() if not "displayName" in login_req.text else print("Logged in!")
+        if "displayName" in login_req.text: return True
+        else: raise LoginErr(Exception); return False
