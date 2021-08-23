@@ -19,7 +19,7 @@ pip3 install /path/to/pyserv
 ```python
 from pyserv import login
 
-iserv = login.IServ("username", "url", "password")
+iserv = login.IServ("username", "password", "url")
 
 iserv.start()
 ```
