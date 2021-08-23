@@ -19,9 +19,9 @@ pip3 install /path/to/pyserv
 ```python
 from pyserv import login
 
-iserv = login.IServ("username", "password", "url")
+iserv = login.IServ("username", "password", "url") # Initialize IServ object "python.login.IServ"
 
-iserv.start()
+iserv.login() # Returns True if login was successfull, False if not
 ```
 
 ## Contributing
