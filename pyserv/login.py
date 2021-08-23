@@ -21,7 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
 import requests
-from pyserv.extra import ping
 
 class UnexpectedException(Exception):
     def __str__(self) -> str:
@@ -49,9 +48,6 @@ class IServ():
         self.password = password
         self.session = requests.Session()
     def login(self):
-        if ping.Ping().test() != True:
-            print("Ping test failed, exiting")
-            exit
         login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
         if "displayName" in login_req.text: return True
         else: raise LoginErr(Exception); return False
