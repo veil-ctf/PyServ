@@ -1,0 +1,5 @@
+# .gitignore
+test.py
+dist
+build
+pyserv/__pycache__
