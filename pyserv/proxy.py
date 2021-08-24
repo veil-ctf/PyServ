@@ -20,3 +20,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
+import requests
+
+class Proxy():
+    def __init__(self, proxy: str):
+        self.proxy = proxy
+    def format(self) -> str:
+        """[summary]
+        Returns:
+            str: Formatted proxy
+        """
+        return {"https": f"https://{self.proxy}"}
+    def connect_test() -> bool:
+        try:
+            requests.get("https://google.com")
+            return False
+        except: return False

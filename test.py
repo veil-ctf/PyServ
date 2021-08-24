@@ -1,4 +1,5 @@
-from pyserv import login
+from pyserv import proxy
 
-x = login.IServ("username", "password", "url")
-print(x.login())
+myproxy = proxy.Proxy("1.1.1.1:80")
+
+print(myproxy.format())
