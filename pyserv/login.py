@@ -22,32 +22,45 @@ SOFTWARE."""
 
 import requests
 
-class UnexpectedException(Exception):
-    def __str__(self) -> str:
-        return "Unexpected Exception occured"
-
-class ServerError(Exception):
-    def __str__(self) -> str:
-        return "Server Error"
-
-class LoginErr(Exception):
-    def __str__(self) -> str:
-        return "Could not log in"
-
 class IServ():
-    def __init__(self, username, password, url):
+    def __init__(
+        self, 
+        username: str,
+        password: str,
+        url: str
+        ):
+        """[summary]
+
+        Args:
+            username (str): IServ username
+            password (str): IServ password
+            url (str): IServ server url (can be \"https://schoolsite.*/iserv/app/login\" or \"https://schoolsite.*/\")
+        """
         self.username = username
         # Bad solution but it will work for now
         self.url = url
-        if "/iserv/app/login" in self.url:
-            self.url = self.url
-        elif url[-1] == "/":
-            self.url = self.url+"iserv/app/login"
-        elif url[-1] != "/":
-            self.url = self.url+"/iserv/app/login"
+        if not "/serv/app/login" in self.url:
+            if "/iserv/app/login" in str(self.url):
+                self.url = url
+            else:
+                try:
+                    if url[-1] == "/":
+                        self.url += "iserv/app/login"
+                    elif url[-1] != "/":
+                        self.url += "/iserv/app/login"
+                except Exception as e:
+                    print("Exception occured: "+str(e))
         self.password = password
         self.session = requests.Session()
-    def login(self):
+    def login(
+        self
+        ):
+        """[summary]
+
+        Returns:
+            True: If the request was successful
+            False: If the request was not successful
+        """
         login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
         if "displayName" in login_req.text: return True
-        else: raise LoginErr(Exception); return False
+        else: return False

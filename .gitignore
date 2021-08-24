@@ -3,3 +3,4 @@ test.py
 dist
 build
 pyserv/__pycache__
+pyserv.egg-info
