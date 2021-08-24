@@ -21,6 +21,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
 import requests
+from colorama import Fore, init
+init()
 
 class IServ():
     def __init__(
@@ -61,6 +63,11 @@ class IServ():
             True: If the request was successful
             False: If the request was not successful
         """
-        login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
-        if "displayName" in login_req.text: return True
-        else: return False
+        try:
+            login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
+            if "displayName" in login_req.text: return True
+            else: return False
+        except Exception as e:
+            print(
+                f"""{Fore.WHITE}[{Fore.RED}-{Fore.WHITE}]{Fore.RED} Error occured, is your url valid?\n{Fore.YELLOW}Exception trace: \n{str(e)}\nIServ URL: {str(self.url)}"""
+                )
