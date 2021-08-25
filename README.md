@@ -15,6 +15,13 @@ OR
 ```sh
 pip3 install /path/to/pyserv
 ```
+### Linux
+
+On linux, simply run:
+
+```sh
+chmod +x setup.sh && ./setup.sh
+```
 
 ## Usage
 
