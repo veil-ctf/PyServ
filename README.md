@@ -8,13 +8,10 @@ Install PyServ using the `setup.py` file.
 
 ### Windows
 
-```sh
-python3 setup.py install
+```batch
+setup.bat
 ```
-OR
-```sh
-pip3 install /path/to/pyserv
-```
+
 ### Linux
 
 On linux, simply run:
