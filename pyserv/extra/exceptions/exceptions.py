@@ -20,14 +20,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
-from pyserv import login, proxy
+class LoginError(Exception):
+    def __str__() -> None:
+        return "Error while logging in"
 
-proxy = proxy.Proxy("1.1.1.1:80")
-formatted_proxy = proxy.format()
-print(formatted_proxy)
+class ServerError(Exception):
+    def __str__() -> None:
+        return "Error while connecting to server, check url"
 
-myiserv = login.IServ("username", "password", "url")
-
-login_myiserv = myiserv.login()
-
-print(login_myiserv)
+class UnknownError(Exception):
+    def __str__() -> None:
+        return "Unknown Error, quitting"

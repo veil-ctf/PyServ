@@ -1,9 +1,9 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='pyserv',
     version='1.0',
-	packages=find_packages(),
+	packages=["pyserv", "pyserv.extra", "pyserv.extra.exceptions"],
 	license='MIT',
     description='IServ API library',
     author='Veil',
