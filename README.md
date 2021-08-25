@@ -6,6 +6,8 @@ PyServ is a python library for logging into iserv, scraping tasks and doing othe
 
 Install PyServ using the `setup.py` file.
 
+### Windows
+
 ```sh
 python3 setup.py install
 ```
