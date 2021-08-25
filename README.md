@@ -14,8 +14,6 @@ setup.bat
 
 ### Linux
 
-On linux, simply run:
-
 ```sh
 chmod +x setup.sh && ./setup.sh
 ```
