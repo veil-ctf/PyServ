@@ -2,12 +2,16 @@
 <img width="500" src="https://i.imgur.com/UTXOx8r.png">
 </h1>
 
-<h4 align="center"> PyServ is a python library for logging into iserv, scraping tasks, downloading unread mails and doing other useful things.
+<h4 align="center"> PyServ is a python library for logging into iserv, scraping tasks, downloading unread mails and doing other useful things
 </h4>
+
+## Content:
+
+<a href="#Installation">Installation</a>
 
 ## Installation
 
-Install PyServ using the `setup.py` file.
+Install PyServ using the `setup.py` file:
 
 ### Windows
 
