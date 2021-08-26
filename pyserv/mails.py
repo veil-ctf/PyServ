@@ -22,7 +22,7 @@ class Mails():
         else:
             print("Error")
 
-    def mail_content(self):
+    def mail_content(self): #not finished
         login_req = self.session.post(self.url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}, data={"_username": self.username, "_password": self.password})
         mail_content_req = self.session.get(self.unseen_mail_url)
         print(mail_content_req.text)
