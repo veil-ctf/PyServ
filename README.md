@@ -7,13 +7,22 @@
 
 ## Content:
 
-• <a href="#Installation">Installation</a>:
-• -- <a href="#Windows">Windows</a>
-• -- <a href="#Linux">Linux</a>
-• <a href="#Supporting">Supporting</a>
-• <a href="#Usage">Usage</a>
-• <a href="#Contributing">Contributing</a>
-• <a href="#License">License</a>
+<ul>
+<li><a href="#Installation">Installation</a>:
+<ol>
+    <li><a href="#Windows">Windows</a>
+    <li><a href="#Linux">Linux</a>
+</ol>
+<li><a href="#Supporting">Supporting</a>
+<ol>
+    <li><a href="#Monero">Monero</a>
+    <li><a href="#Bitcoin">Bitcoin</a>
+    <li><a href="#Ethereum">Ethereum</a>
+</ol>
+<li><a href="#Usage">Usage</a>
+<li><a href="#Contributing">Contributing</a>
+<li><a href="#License">License</a>
+</ul>
 
 ## Installation
 
@@ -35,11 +44,11 @@ chmod +x setup.sh && ./setup.sh
 
 If you like this project and want to support it, you can donate crypto:
 
-Monero (XMR): ```86oxMS9ESAFNo7NsZBQCpDDPmCXnToLiHfBidUv2iKLD7E5vXBynhiGEfMi61ZqSaTiT8uz3duCoqFYbqMx9RTLs85PkwAG```
+###### Monero (XMR): ```86oxMS9ESAFNo7NsZBQCpDDPmCXnToLiHfBidUv2iKLD7E5vXBynhiGEfMi61ZqSaTiT8uz3duCoqFYbqMx9RTLs85PkwAG```
 
-Bitcoin: ```bc1qew4k0ws8w50m26svsz2sq6lxg6rrv3hxsrpm92```
+###### Bitcoin: ```bc1qew4k0ws8w50m26svsz2sq6lxg6rrv3hxsrpm92```
 
-Ethereum: ```0xDEbDf9ea09fa7fA129ab63F018D58F7EacC55a69```
+###### Ethereum: ```0xDEbDf9ea09fa7fA129ab63F018D58F7EacC55a69```
 
 
 ## Usage
