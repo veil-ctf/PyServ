@@ -1,5 +1,5 @@
 <h1 align="center">
-<img width="500" src="https://i.imgur.com/teJVrqo.png">
+<img width="500" src="https://i.imgur.com/eOuPqEC.png">
 </h1>
 
 <h4 align="center"> PyServ is a python library for logging into iserv, scraping tasks, downloading unread mails and doing other useful things.
