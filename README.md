@@ -7,7 +7,13 @@
 
 ## Content:
 
-<a href="#Installation">Installation</a>
+• <a href="#Installation">Installation</a>:
+• -- <a href="#Windows">Windows</a>
+• -- <a href="#Linux">Linux</a>
+• <a href="#Supporting">Supporting</a>
+• <a href="#Usage">Usage</a>
+• <a href="#Contributing">Contributing</a>
+• <a href="#License">License</a>
 
 ## Installation
 
@@ -25,7 +31,7 @@ Install PyServ using the `setup.py` file:
 chmod +x setup.sh && ./setup.sh
 ```
 
-### Supporting
+## Supporting
 
 If you like this project and want to support it, you can donate crypto:
 
