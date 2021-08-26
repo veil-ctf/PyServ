@@ -1,6 +1,9 @@
-# PyServ
+<h1 align="center">
+<img width="500" src="https://i.imgur.com/teJVrqo.png">
+</h1>
 
-PyServ is a python library for logging into iserv, scraping tasks and doing other useful things.
+<h4 align="center"> PyServ is a python library for logging into iserv, scraping tasks, downloading unread mails and doing other useful things.
+</h4>
 
 ## Installation
 
@@ -9,7 +12,7 @@ Install PyServ using the `setup.py` file.
 ### Windows
 
 ```batch
-setup.bat
+.\setup.bat
 ```
 
 ### Linux
@@ -17,6 +20,17 @@ setup.bat
 ```sh
 chmod +x setup.sh && ./setup.sh
 ```
+
+### Supporting
+
+If you like this project and want to support it, you can donate crypto:
+
+Monero (XMR): ```86oxMS9ESAFNo7NsZBQCpDDPmCXnToLiHfBidUv2iKLD7E5vXBynhiGEfMi61ZqSaTiT8uz3duCoqFYbqMx9RTLs85PkwAG```
+
+Bitcoin: ```bc1qew4k0ws8w50m26svsz2sq6lxg6rrv3hxsrpm92```
+
+Ethereum: ```0xDEbDf9ea09fa7fA129ab63F018D58F7EacC55a69```
+
 
 ## Usage
 
@@ -28,7 +42,11 @@ iserv = login.IServ("username", "password", "url") # Initialize IServ object "py
 iserv.login() # Returns True if login was successfull, False if not
 ```
 
+For more info on the usage, please take a look at the `test.py` file, it contains some of PyServs features. We may or may not create a documentation in the future.
+
 ## Contributing
+
+##### PyServ is still under development and needs as many helpers as we can get, you dont even need to be a programmer, you can also change things in this file ```(README.md)``` or do other useful things! if you wanna contribute, here are the 5 simple steps to do that:
 
 1. Fork it
 2. Create your feature branch: `git checkout -b my-new-feature`
