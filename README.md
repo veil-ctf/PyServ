@@ -38,7 +38,7 @@ Install PyServ using the `setup.py` file:
 
 <kbd>
 chmod +x setup.sh && ./setup.sh
-<kbd>
+</kbd>
 
 ## Supporting
 
