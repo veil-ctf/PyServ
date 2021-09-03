@@ -39,7 +39,7 @@ Install PyServ using the `setup.py` file:
 <kbd>
 chmod +x setup.sh && ./setup.sh
 </kbd>
-<kbd>
+
 ## Supporting
 
 If you like this project and want to support it, you can donate crypto:
@@ -100,4 +100,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-</kbd>
