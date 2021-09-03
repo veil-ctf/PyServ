@@ -30,15 +30,15 @@ Install PyServ using the `setup.py` file:
 
 ### Windows
 
-```batch
+<kbd>
 .\setup.bat
-```
+</kbd>
 
 ### Linux
 
-```sh
+<kbd>
 chmod +x setup.sh && ./setup.sh
-```
+<kbd>
 
 ## Supporting
 
