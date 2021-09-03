@@ -1,4 +1,4 @@
-<kbd><h1 align="center">
+<h1 align="center">
 <img width="500" src="https://i.imgur.com/UTXOx8r.png">
 </h1>
 
@@ -39,7 +39,7 @@ Install PyServ using the `setup.py` file:
 <kbd>
 chmod +x setup.sh && ./setup.sh
 </kbd>
-
+<kbd>
 ## Supporting
 
 If you like this project and want to support it, you can donate crypto:
