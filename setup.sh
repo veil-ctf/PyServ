@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! [ -x "$(command -v python3)" ]; then
+if ![ -x "$(command -v python3)" ]; then
   echo 'Error: python3 is not installed.' >&2;
   exit 1;
 else

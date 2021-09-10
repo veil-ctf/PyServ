@@ -23,11 +23,11 @@ SOFTWARE."""
 from pyserv import login, proxy
 
 proxy = proxy.Proxy("1.1.1.1:80")
-formatted_proxy = proxy.format()
+formatted_proxy = proxy.format() # Returns properly formatted proxy
 print(formatted_proxy)
 
-myiserv = login.IServ("username", "password", "url")
+myiserv = login.IServ("username", "password", "url") # Proxy not supported, yet
 
 login_myiserv = myiserv.login()
 
-print(login_myiserv)
+print(login_myiserv) # Prints True or False, depending on successful or not
