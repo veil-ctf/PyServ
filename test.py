@@ -26,7 +26,7 @@ proxy = proxy.Proxy("1.1.1.1:80")
 formatted_proxy = proxy.format() # Returns properly formatted proxy
 print(formatted_proxy)
 
-myiserv = login.IServ("username", "password", "url") # Proxy not supported, yet
+myiserv = login.IServ("url", "password", "url") # Proxy not supported, yet
 
 login_myiserv = myiserv.login()
 
